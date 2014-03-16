@@ -7,8 +7,9 @@ var app = module.exports = express();
 app.http().io();
 
 var connect = function () {
+  var mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/chat';
   var options = { server: { socketOptions: { keepAlive: 1 } } };
-  mongoose.connect('mongodb://localhost/chat', options);
+  mongoose.connect(mongoUrl, options);
 }
 connect();
 
