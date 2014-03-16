@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+  #username-modal.modal.fade.col-xs-11.col-sm-7.col-md-4.text-center.center-block
+    .modal-dialog
+    .modal-content
+      .modal-header
+        .modal-title
+          h4 Please enter a username...
+      .modal-body
+        input(type='text', placeholder='Username')#username.form-control
+        .help-block
+      .modal-footer
+        button#submit-username-btn.btn.btn-success.disabled Join
+
+  #content
+    #chat-rooms-list.grey-background.col-xs-3.homepage-window
+      h4 Click on an existing chat room to join
+      ul
+        each chatRoom in chatRooms
+          li
+            a(href='#', class='listed-chat-room')
+              =chatRoom.name
+
+    #new-chat-room.grey-background.col-xs-3.homepage-window
+      h4 Create a new chat room
+      input(type='text', placeholder='Name of Chat Room')#chat-room-name.form-control
+      .help-block
+      button#create-chat-room-btn.btn.btn-success.center-block.disabled Create
+
+    #chat-window.grey-background.col-xs-8.hide.chat-room-window
+
+    #users-window.grey-background.col-xs-3.hide.chat-room-window
+      .well.text-center
+        i.fa.fa-users.fa-lg
+          span#current-chat-room
+      #users-list.disabled
+
+    #msg.col-xs-8.hide.chat-room-window
+      textarea(placeholder='Enter a message.')#enter-message.input-lg.col-xs-9
+      button#send-btn.col-xs-2.btn.btn-lg.btn-primary.disabled
+        i.fa.fa-comment &nbsp;Send

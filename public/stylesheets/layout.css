@@ -1,0 +1,59 @@
+.header {
+  background-color: #5b759d;
+}
+
+.header h1 {
+  font-family: cursive;
+}
+
+.grey-background {
+  margin-left: 20px;
+  padding: 15px 15px 15px 15px;
+  background-color: #eee;
+  border-width: 1px;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: black;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+
+#chat-window {
+  height: 420px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+#users-window {
+  display: block;
+  font-weight: 500;
+  height: 600px;
+}
+
+#msg {
+  margin: -160px 0px 0px 20px;
+  border-width: 1px;
+  border-radius: 7px;
+  border-style: solid;
+}
+
+#content textarea {
+  border: 0px;
+  height: 150px;
+  margin: 5px 5px 5px 5px;
+  resize: none;
+}
+
+#msg button {
+  height: 150px;
+  margin: 5px 5px 5px 5px;
+  float: right;
+}
+
+#username-modal {
+  top: 25%;
+}
+
+#submit-chat-room-name-btn {
+    margin-top: 10px;
+}
